@@ -13,3 +13,5 @@ class HeroForm(forms.ModelForm):
         model = Hero
         fields = ['codinome', 'nome_real', 'poder_principal', 'cidade', 'historia']
 
+
+    

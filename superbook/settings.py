@@ -57,7 +57,7 @@ ROOT_URLCONF = 'superbook.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'superbook' / 'templates'],  # <-- adicionamos a pasta global
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -5,8 +5,8 @@ from django.views.generic import ListView
 from .forms import PostForm
 
 def lista_posts(request):
-    posts = Post.objects.all()  
-    return render(request, "posts/lista_posts.html", {"lista": posts})
+    posts = Post.objects.all().order_by('-criado_em')  
+    return render(request, "posts/lista_posts.html", {"posts": posts})
 
 class PostListView(ListView):
     model = Post
@@ -24,4 +24,4 @@ def criar_post(request):
     else:
         form = PostForm()
 
-    return render(request, "heroes/form_heroi.html", {"form": form})
+    return render(request, "posts/form_posts.html", {"form": form})

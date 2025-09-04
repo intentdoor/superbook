@@ -2,6 +2,8 @@ from django.db import models
 from heroes.models import Hero
 # Create your models here.
 
+# Arthur Américo
+
 class Post(models.Model):
     autor = models.ForeignKey(Hero, on_delete=models.CASCADE, related_name="posts")
     mensagem = models.TextField()

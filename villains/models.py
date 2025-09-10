@@ -1,7 +1,8 @@
-
 from django.db import models
 
-class Hero(models.Model):
+# Arthur Américo
+
+class Villain(models.Model):
     codinome = models.CharField(max_length=50, unique=True)
     nome_real = models.CharField(max_length=100, blank=True, null=True)
     poder_principal = models.CharField(max_length=100)
@@ -12,5 +13,3 @@ class Hero(models.Model):
 
     def __str__(self):
         return self.codinome
-
-

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     ##criei v
     'heroes',
     'posts',
+    'villains',
 ]
 
 MIDDLEWARE = [

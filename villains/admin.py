@@ -1,9 +1,10 @@
-
 from django.contrib import admin
-from .models import Hero
+from .models import Villain
 
-@admin.register(Hero)
-class HeroAdmin(admin.ModelAdmin):
+# Arthur Américo
+
+@admin.register(Villain)
+class VillainAdmin(admin.ModelAdmin):
     list_display = ['codinome', 'nome_real', 'poder_principal', 'cidade', 'criado_em' , 'email_contato']
     list_filter = ['cidade']
     search_fields = ['codinome', 'nome_real', 'cidade']
@@ -20,4 +21,3 @@ class HeroAdmin(admin.ModelAdmin):
         }),
     )
     readonly_fields = ['criado_em']
-

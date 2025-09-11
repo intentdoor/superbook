@@ -1,8 +1,9 @@
 
-from django.shortcuts import render , redirect
+from django.shortcuts import render 
 from .models import Post
-from django.views.generic import ListView
+from django.views.generic import ListView , CreateView
 from .forms import PostForm
+from django.urls import reverse_lazy
 
 def lista_posts(request):
     posts = Post.objects.all().order_by('-criado_em')  
@@ -15,13 +16,17 @@ class PostListView(ListView):
 
 ## Arthur Américo Marques
 
-def criar_post(request):
-    if request.method == "POST":
-        form = PostForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('lista_posts')
-    else:
-        form = PostForm()
+class PostCreateView(CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'posts/form_post.html'
+    success_url = reverse_lazy('listar_posts')
 
-    return render(request, "posts/form_posts.html", {"form": form})
+
+from django.views.generic import ListView
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'posts/lista_posts.html'
+    context_object_name = 'posts'
+

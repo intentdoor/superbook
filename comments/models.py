@@ -1,7 +1,7 @@
 from django.db import models
 from posts.models import Post
 
-# Create your models here.
+# ARTHUR AMÈRICO
 
 class Comentario(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comentarios")

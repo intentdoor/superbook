@@ -14,7 +14,7 @@ class VillainAdmin(admin.ModelAdmin):
             'fields': ('codinome', 'nome_real')
         }),
         ('Informações Gerais', {
-            'fields': ('poder_principal', 'cidade', 'historia' , 'email_contato')
+            'fields': ('poder_principal', 'cidade', 'historia' , 'email_contato' , 'imagem')
         }),
         ('Dados de Registro', {
             'fields': ('criado_em',)

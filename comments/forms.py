@@ -7,3 +7,5 @@ class ComentarioForm(forms.ModelForm):
         fields = ['texto']
         labels = {'texto': 'Comentário'}
         widgets = {'texto': forms.Textarea(attrs={'rows': 3})}
+
+#Arthur Américo

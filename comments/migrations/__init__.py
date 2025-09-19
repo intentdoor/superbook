@@ -1,6 +1,7 @@
 import django.db.models.deletion
 from django.db import migrations, models
 
+# ARHTUR AMÈRICO
 
 class Migration(migrations.Migration):
 

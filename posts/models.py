@@ -1,5 +1,6 @@
 from django.db import models
-from heroes.models import Hero
+from heroes.models import Hero 
+from villains.models import  Villain
 # Create your models here.
 
 # Arthur Américo
